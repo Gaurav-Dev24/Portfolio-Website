@@ -3,7 +3,7 @@ import "./Profile.css";
 import { Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import TodoProject from "../../img/todo-proj.png"; 
-import EcommerceProject from "../../img/ecommerce.png"; 
+// import EcommerceProject from "../../img/ecommerce.png"; 
 import MovieProject from "../../img/movie-proj.png"; 
 import ShoppingCartProject from "../../img/shoppingcart-proj.png"; 
 
@@ -32,9 +32,9 @@ const Profile = () => {
             <SwiperSlide>
                 <img src={MovieProject} alt='movie'/>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
                 <img src={EcommerceProject} alt='ecommerce'/>
-            </SwiperSlide>
+            </SwiperSlide> */}
         </Swiper>
     </div>
   )
