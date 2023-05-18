@@ -111,3 +111,19 @@
     left: 56%;
     filter: blur(72px);
 }
+
+
+@media screen and (max-width: 480px) {
+    .intro{
+      flex-direction: column;
+      height: 55rem;
+      gap:7rem;
+    }
+    .i-right{
+        transform: scale(0.7);
+        left: -2rem;
+    }
+    .floating-div:nth-of-type(1){
+        top: -7rem !important;
+    }
+  }

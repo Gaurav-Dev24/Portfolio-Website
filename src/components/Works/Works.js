@@ -6,12 +6,18 @@ import ShoppingCart from "../../img/shoppingcart.png";
 import Movie from "../../img/movie.png";
 import Pokemon from "../../img/pokemon.png";
 import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
+
 
 const Works = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  // TRANSITION
   return (
-    <div className="works">
+  <div className="works" id= "Works">
+    {/* <div className="w-left"> */}
+
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>Created Different</span>
         <span>Projects on</span>
@@ -30,12 +36,18 @@ const Works = () => {
         </span>
 
         <button className="button s-button">Hire Me</button>
-        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
+          <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
+    {/* </div> */}
 
       {/* right side */}
       <div className="w-right">
-        <div className="w-mainCircle">
+        <motion.div
+        initial={{ rotate: 45 }}
+        whileInView={{ rotate: 0 }}
+        viewport={{ margin: "-40px" }}
+        transition={{ duration: 3.5, type: "spring" }}
+        className="w-mainCircle">
             <div className="w-secCircle">
             <img src={RealEstate} alt="realestate-img" />
             </div>
@@ -52,7 +64,7 @@ const Works = () => {
             <img src={Movie} alt="movie-img" />
             </div>
 
-        </div>
+        </motion.div>
     {/* background circle */}
         <div className="w-backCircle blueCircle"></div>
         <div className="w-backCircle yellowCircle"></div>

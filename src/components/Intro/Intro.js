@@ -11,17 +11,22 @@ import Crown from "../../img/crown.png";
 import glassesimoji from "../../img/glassesimoji.png";
 import FloatingDiv from "../FloatingDiv/FloatingDiv";
 import { themeContext } from "../../Context";
-
+import { motion } from "framer-motion";
 
 const Intro = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  const transition = {
+    duration: 2.5,
+    type: "spring",
+  };
   return (
     <div className="intro" id="Intro">
       {/* Left Side */}
       <div className="i-left">
         <div className="i-name">
-        <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Gaurav Dev</span>
           <span>
             Frontend Developer with a strong foundation in web designing and
@@ -54,13 +59,33 @@ const Intro = () => {
         <img src={Vector1} alt="vector1-img" />
         <img src={Vector2} alt="vector2-img" />
         <img src={boy} alt="boy-img" />
-        <img src={glassesimoji} alt="galssesimoji-img" />
-        <div style={{ top: "-4%", left: "68%" }}>
+
+        <motion.img
+          initial={{ left: "-36%" }}
+          whileInView={{ left: "-24%" }}
+          transition={transition}
+          src={glassesimoji}
+          alt="galssesimoji-img"
+        />
+
+        <motion.div
+          initial={{ top:"-4%", left: "74%" }}
+          whileInView={{ left: "68%" }}
+          transition={transition}
+          style={{ top: "-4%", left: "68%" }}
+          className="floating-div"
+        >
           <FloatingDiv image={Crown} txt1="Web" txt2="Developer" />
-        </div>
-        <div style={{ top: "18rem", left: "0rem" }}>
+        </motion.div>
+
+        <motion.div
+        initial={{ top:"18rem", left: "9rem" }}
+        whileInView={{ left: "0rem" }}
+        transition={transition}
+        className="floating-div"
+        style={{ top: "18rem", left: "0rem" }}>
           <FloatingDiv image={thumbup} txt1="Best" txt2="Designs" />
-        </div>
+        </motion.div>
 
         {/* blur div */}
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

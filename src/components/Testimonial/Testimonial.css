@@ -69,3 +69,15 @@
 .t-wrapper .swiper-pagination-bullet-active{
     background: var(--orange);
 }
+
+
+
+@media screen and (max-width: 480px) {
+    .t-wrapper{
+      padding: 0;
+    }
+    .testimonial > img{
+      height: 70px;
+      width: 70px;
+    }
+  }
