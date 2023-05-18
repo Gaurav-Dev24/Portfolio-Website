@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Services.css";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Cards from "../Cards/Cards";
 import Resume from "./resume.pdf"
+import { themeContext } from "../../Context";
 
 const Services = () => {
+
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="services">
       {/* Left Div */}
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style= {{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>Services</span>
         <span>
           As a web developer, I have expertise in various programming languages,

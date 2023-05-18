@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Works.css";
 import RealEstate from "../../img/realestate.png";
 import Todo from "../../img/todo.png";
 import ShoppingCart from "../../img/shoppingcart.png";
 import Movie from "../../img/movie.png";
 import Pokemon from "../../img/pokemon.png";
+import { themeContext } from "../../Context";
 
 const Works = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="works">
       <div className="awesome">
-        <span>Created Different</span>
+        <span style={{ color: darkMode ? "white" : "" }}>Created Different</span>
         <span>Projects on</span>
         <span>
           I have created six plus landing pages such as Credit Card, Beats, Real
