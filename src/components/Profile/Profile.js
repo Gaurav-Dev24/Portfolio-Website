@@ -29,16 +29,27 @@ const Profile = () => {
         className='portfolio-slider'
         >
             <SwiperSlide>
-                <img src={ShoppingCartProject} alt='shoppingcart'/>
+                <a href='https://gdev-shopping-cart.netlify.app/' target='blank'>
+                    <img src={ShoppingCartProject} alt='shoppingcart'/>
+                </a> 
             </SwiperSlide>
+
             <SwiperSlide>
+                <a href='https://gdev-todo-app.netlify.app/' target='balnk'>
                 <img src={TodoProject} alt='todo'/>
+                </a>
             </SwiperSlide>
+
             <SwiperSlide>
+                <a href='https://gdev-movie-app.netlify.app/' target='balnk'>
                 <img src={MovieProject} alt='movie'/>
+                </a>
             </SwiperSlide>
+
             <SwiperSlide>
+                <a href='https://gdev-portfolio.netlify.app/' target='balnk'>
                 <img src={Portfolio} alt='portfoilio'/>
+                </a>
             </SwiperSlide>
         </Swiper>
     </div>
